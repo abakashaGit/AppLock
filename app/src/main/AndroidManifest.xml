@@ -8,7 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.activity.MainLockScreen">
+        <activity android:name=".main.activity.MainLockScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +30,7 @@
             android:name=".main.myutils.AppLockService"
             android:enabled="true"
             />
+
     </application>
 
 </manifest>

@@ -13,8 +13,8 @@ public class MainLockScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_lock_screen);
         try {
-            getFragmentManager().beginTransaction().add(R.id.main_fragment_holder, new FragmentAppList()).addToBackStack("appList").commit();
-        }catch (Exception e) {
+            getFragmentManager().beginTransaction().replace(R.id.main_fragment_holder, new FragmentAppList()).addToBackStack("appList").commit();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
